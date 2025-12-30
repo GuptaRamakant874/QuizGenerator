@@ -1,0 +1,222 @@
+/* Reset / base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background & body text */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    min-height: 100vh;
+    color: #111827;
+}
+
+/* Centering wrapper */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Main card */
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: #ffffff;
+    padding: 24px 22px 26px;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+/* Heading & subtitle */
+h1 {
+    text-align: center;
+    color: #111827;
+    font-size: 28px;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Start screen */
+.start-screen {
+    text-align: center;
+}
+
+/* Hide / show helper */
+.hidden {
+    display: none;
+}
+
+/* Question block */
+.question {
+    margin-bottom: 18px;
+    padding: 14px 14px 10px;
+    border-radius: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.question:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.09);
+    border-color: #bfdbfe;
+}
+
+.question p {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+/* Option styling */
+.option {
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.12s ease, transform 0.08s ease;
+    font-size: 14px;
+    color: #374151;
+}
+
+.option:hover {
+    background: #e5f0ff;
+    transform: translateX(2px);
+}
+
+.option input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #2563eb; /* modern browsers */
+}
+
+/* Main submit button inside form */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.55);
+    filter: brightness(1.02);
+}
+
+.submit-btn:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.4);
+}
+
+/* Generic primary / secondary buttons (Start / Restart) */
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+/* Start Quiz button */
+.primary-btn {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+.primary-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.55);
+    filter: brightness(1.02);
+}
+
+/* Restart button */
+.secondary-btn {
+    width: 100%;
+    margin-top: 18px;
+    background: #ffffff;
+    color: #1f2933;
+    border: 1px solid #d1d5db;
+}
+
+.secondary-btn:hover {
+    background: #f3f4f6;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(148, 163, 184, 0.35);
+}
+
+/* Result / score area */
+.result-box {
+    margin-top: 16px;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: 1px dashed #bfdbfe;
+    background: #eff6ff;
+    color: #1d4ed8;
+    min-height: 24px;
+}
+
+/* Correct / incorrect highlighting (optional) */
+.correct {
+    border-color: #22c55e !important;
+    background: #ecfdf3 !important;
+}
+
+.incorrect {
+    border-color: #ef4444 !important;
+    background: #fef2f2 !important;
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 480px) {
+    .container {
+        padding: 18px 16px 22px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .question {
+        padding: 12px 10px 8px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <!-- START SCREEN -->
+        <div id="startScreen" class="container start-screen">
+            <h1>Software Engineering Quiz</h1>
+            <p class="subtitle">Ready to test your knowledge? 💻</p>
+            <button id="startBtn" class="primary-btn">Start Quiz</button>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div id="quizScreen" class="container quiz-screen hidden">
+            <h1>Software Engineering Quiz</h1>
+            <p class="subtitle" id="progressText">Answer the questions below.</p>
+
+            <form id="quizForm">
+                <!-- Questions will be injected by 5Random.js -->
+            </form>
+
+            <div id="out" class="result-box"></div>
+
+            <button id="restartBtn" type="button" class="secondary-btn">
+                Restart Quiz
+            </button>
+        </div>
+
+    </div>
+
+    <script src="./5Random.js"></script>
+</body>
+</html>
